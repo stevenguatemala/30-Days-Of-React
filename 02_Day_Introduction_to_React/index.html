@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Days of React Challenge</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        html, 
+        body {
+            height: 100%;
+            line-height: 1.5;
+            font-family: 'Montserrat';
+            font-weight: 300;
+            color: black;
+
+        }
+
+        .root {
+            min-height: 100%;
+            position: relative;
+        }
+
+        .header-wrapper,
+        .main-wrapper {
+            padding: 10px;
+            margin: 2px auto;
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 300;
+        }
+
+        h2,
+        h3 {
+            font-weight: 300;
+        }
+
+        header {
+            background-color: #61dbfb;
+            padding: 10px;
+        }
+
+        main {
+            padding: 10px;
+            padding-bottom: 60px;
+        }
+
+        ul {
+            margin-left: 15px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+        }
+
+        .footer-wrapper {
+            font-weight: 400;
+            text-align: center;
+            line-height: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="root"></div>
+    <script crossorigin="anonymous" src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin="anonymous" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+       const rootElement = document.querySelector('.root')
+       
+       const headerStyles = {
+        backgroundColor: '#61DBFB',
+        fontFamily: 'Helvetica Neue',
+        padding: 25,
+        lineHeight: 1.5,
+
+       }
+
+  const welcome = 'Welcome to 30 Days Of React'
+  const title = 'Getting Started React'
+  const subtitle = 'JavaScript Library'
+  const authorFirstName = 'Steven'
+  const authorLastName = 'Guatemala'
+  const date = 'Dec 15th. 2024'
+       
+  const header = (
+        <header style={headerStyles}>
+            <div className= 'header-wrapper'>
+            <h1>{welcome}</h1>
+            <h2>{title}</h2>
+            <h3>{subtitle}</h3>
+            <p>
+        Instructor: {authorFirstName} {authorLastName}
+            </p>
+      <small>Date: {date}</small>
+            </div>
+        </header>
+       ) 
+       const mainStyles = {
+        backgroundColor: '#F3F0F5'
+       }
+       
+    const techs = ['HTML', 'CSS', 'JavaScript']
+    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
+       
+    const main = (
+        <main style={mainStyles}>
+            <div className={'main-wrapper'}>
+                <p>
+        Prerequisite to get started{' '}
+        <strong><em>react.js</em></strong>
+        :
+      </p><ul>{techsFormatted}</ul></div></main>
+       )
+       const footerStyles = {
+        backgroundColor: '#61DBFB'
+       }
+       const footer = (
+        <div className={'footer-wrapper'}>
+       <footer style={footerStyles}>
+            <p>Copyright 2024</p>
+        </footer>
+        </div>
+       )
+       
+
+       const app = (
+  <div>
+    {header}
+    {main}
+    {footer}
+  </div>
+)
+
+    ReactDOM.render(app, rootElement);   
+    techs
+    
+  
+    </script>
+   
+</body>
+</html>
