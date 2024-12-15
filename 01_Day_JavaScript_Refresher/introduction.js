@@ -346,3 +346,5 @@ console.log(solveQuadratic(1, -1, 0)) //{1, 0}
 
  const numbs = [1, 2, 3, 4, 5];
  printArrays(numbs);
+
+ printArrays
